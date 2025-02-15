@@ -18,12 +18,7 @@
     <header class="header">
       <div class="container">
         <div class="logo">
-          <a href="index.html"
-            ><img
-              src="./images/logo.png"
-              alt="Logo"
-              class="image-logo"
-          /></a>
+          <a href="index.html"><img src="./images/logo.png" alt="Logo" class="image-logo" /></a>
         </div>
         <nav class="navbar">
           <div class="mobile-menu-toggle">
@@ -55,19 +50,16 @@
     <section class="hero">
       <div class="container">
         <h2>Your Dream Outdoor Space Awaits</h2>
-        <p>
-          Creating beautiful, functional landscapes for residential and commercial
-          properties.
-        </p>
+        <p>Creating beautiful, functional landscapes for residential and commercial properties.</p>
         <a href="#contact" class="cta-button">Get a Quote</a>
       </div>
     </section>
 
     <section id="about" class="about">
-      <div class="container" style="text-align: center;">
+      <div class="container" style="text-align: center">
         <p>
-          Parkway Landscaping has been transforming outdoor spaces for over 20 years,
-          bringing expertise and passion to every project.
+          Parkway Landscaping has been transforming outdoor spaces for over 20 years, bringing
+          expertise and passion to every project.
         </p>
       </div>
     </section>
@@ -79,23 +71,17 @@
           <a href="services/garden-design.html" class="card">
             <h3>Garden Design</h3>
             <img src="images/001-landscape.png" alt="Garden Design" />
-            <p>
-              Transform your outdoor space with our expert garden design services.
-            </p>
+            <p>Transform your outdoor space with our expert garden design services.</p>
           </a>
           <a href="services/hardscaping.html" class="card">
             <h3>Hardscaping</h3>
             <img src="images/002-paving.png" alt="Hardscaping" />
-            <p>
-              High-quality patios, walkways, and retaining walls for every style.
-            </p>
+            <p>High-quality patios, walkways, and retaining walls for every style.</p>
           </a>
           <a href="services/maitenance.html" class="card">
             <h3>Maintenance</h3>
             <img src="images/003-park.png" alt="Maintenance" />
-            <p>
-              Keep your landscape pristine with our regular maintenance packages.
-            </p>
+            <p>Keep your landscape pristine with our regular maintenance packages.</p>
           </a>
         </div>
       </div>
@@ -117,17 +103,11 @@
         <h2>Our Clients</h2>
         <div class="testimonial-cards">
           <div class="card">
-            <p>
-              "Parkway Landscaping transformed our yard into a paradise. Highly
-              recommended!"
-            </p>
+            <p>"Parkway Landscaping transformed our yard into a paradise. Highly recommended!"</p>
             <span>- Jane D.</span>
           </div>
           <div class="card">
-            <p>
-              "Professional, reliable, and talented. Couldn’t be happier with the
-              results."
-            </p>
+            <p>"Professional, reliable, and talented. Couldn’t be happier with the results."</p>
             <span>- Mark S.</span>
           </div>
         </div>
@@ -137,10 +117,7 @@
     <section id="contact" class="contact">
       <div class="container">
         <h2>Contact Us</h2>
-        <p>
-          Have a question or ready to start your landscaping project? Reach out to
-          us today!
-        </p>
+        <p>Have a question or ready to start your landscaping project? Reach out to us today!</p>
         <form action="#" method="POST">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
@@ -175,7 +152,7 @@
     <!-- JavaScript for Mobile Menu and Dropdown Toggle -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Toggle main mobile menu
+        // Toggle the main mobile menu
         const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
         const navMenu = document.querySelector(".nav-menu");
 
@@ -183,12 +160,15 @@
           navMenu.classList.toggle("active");
         });
 
-        // Toggle dropdown on mobile
-        document.querySelectorAll(".dropbtn").forEach(function (btn) {
+        // Toggle the nested "Services" dropdown on mobile
+        document.querySelectorAll(".dropdown .dropbtn").forEach(function (btn) {
           btn.addEventListener("click", function (e) {
             if (window.innerWidth <= 768) {
               e.preventDefault();
-              const dropdownContent = this.nextElementSibling;
+
+              console.log("test");
+              // Use parentElement to reliably target the dropdown container
+              const dropdownContent = this.querySelector(".dropdown-content");
               dropdownContent.classList.toggle("active");
             }
           });
