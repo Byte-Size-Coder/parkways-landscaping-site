@@ -9,27 +9,55 @@
   <body>
     <header class="header">
       <div class="container">
+        <!-- Logo -->
         <div class="logo">
-          <a href="../index.html"><img src="../images/logo.png" alt="Logo" class="image-logo" /></a>
+          <a href="../index.html">
+            <img src="../images/logo.png" alt="Logo" class="image-logo" />
+          </a>
         </div>
-        <nav class="navbar">
-          <ul>
+        <!-- Desktop Navigation -->
+        <nav class="navbar desktop-nav">
+          <ul class="nav-menu">
             <li><a href="../about/index.html">About Us</a></li>
             <li class="dropdown">
-              <a class="dropbtn">Services &#9662;</a>
+              <a class="dropbtn" href="#">Services &#9662;</a>
               <div class="dropdown-content">
                 <a href="../services/garden-design.html">Garden Design</a>
                 <a href="../services/hardscaping.html">Hardscaping</a>
                 <a href="../services/maitenance.html">Maintenance</a>
               </div>
             </li>
-            <li><a href="index.html">Seasonal Design</a></li>
+            <li><a href="../seasonal/index.html">Seasonal Design</a></li>
             <li><a href="../testimonials/index.html">Testimonials</a></li>
           </ul>
         </nav>
+        <!-- Mobile Navigation -->
+        <nav class="navbar mobile-nav">
+          <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/index.html">About Us</a></li>
+            <!-- Flattened Services Links -->
+            <li><a href="../services/garden-design.html">Garden Design</a></li>
+            <li><a href="../services/hardscaping.html">Hardscaping</a></li>
+            <li><a href="../services/maitenance.html">Maintenance</a></li>
+            <li><a href="../testimonials/index.html">Testimonials</a></li>
+          </ul>
+        </nav>
+        <!-- Contact Info -->
         <div class="contact-info">
-          <p>Call us: <a href="tel:+123456789">+1 (234) 567-890</a></p>
-          <p>Email: <a href="mailto:info@parkwaylandscaping.com">info@parkwaylandscaping.com</a></p>
+          <div>
+            <span><img src="../images/phone-call.png" width="25px" style="color: white" /></span>
+            <a href="tel:+123456789">+1 (234) 567-890</a>
+          </div>
+          <div>
+            <span><img src="../images/email.png" width="25px" /></span>
+            <a href="mailto:info@parkwaylandscaping.com">info@parkwaylandscaping.com</a>
+          </div>
         </div>
       </div>
     </header>
@@ -42,6 +70,94 @@
           throughout the year. From spring blooms to winter lights, we craft landscapes that match
           every season.
         </p>
+
+        <!-- Cost Section -->
+        <section class="cost-section">
+          <h2>Cost &amp; Packages</h2>
+          <p>
+            Our seasonal design packages start at $XXXX. We offer customized solutions to meet your
+            needs and budget. Contact us for a detailed quote.
+          </p>
+        </section>
+
+        <!-- Summer Section -->
+        <section class="season-section summer">
+          <h2>Summer</h2>
+          <div class="season-content">
+            <div class="season-text">
+              <p>
+                Enjoy lush, vibrant gardens during the summer months. We design outdoor spaces that
+                thrive in the heat, incorporating drought-resistant plants and water features to
+                keep your landscape refreshing.
+              </p>
+            </div>
+            <div class="season-gallery gallery">
+              <img src="../images/seasonal/seasonal-summer_01.jpg" alt="Summer Design 1" />
+              <img src="../images/seasonal/seasonal-summer_02.jpg" alt="Summer Design 2" />
+              <img src="../images/seasonal/seasonal-summer_03.jpg" alt="Summer Design 3" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Fall Section -->
+        <section class="season-section fall">
+          <h2>Fall</h2>
+          <div class="season-content">
+            <div class="season-text">
+              <p>
+                Our fall designs highlight warm colors and textures, capturing the essence of
+                autumn. Enjoy a cozy, inviting landscape as the leaves change and nature transforms.
+              </p>
+            </div>
+            <div class="season-gallery gallery">
+              <img src="../images/seasonal/seasonal-fall_01.webp" alt="Fall Design 1" />
+              <img src="../images/seasonal/seasonal-fall_02.webp" alt="Fall Design 2" />
+              <img src="../images/seasonal/seasonal-fall_03.webp" alt="Fall Design 3" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Winter Section -->
+        <section class="season-section winter">
+          <h2>Winter</h2>
+          <div class="season-content">
+            <div class="season-text">
+              <p>
+                Winter landscapes can be magical. We bring light and structure to your garden with
+                strategic lighting and evergreens that stand strong during the colder months.
+              </p>
+            </div>
+            <div class="season-gallery gallery">
+              <img src="../images/seasonal/seasonal-winter_01.webp" alt="Winter Design 1" />
+              <img src="../images/seasonal/seasonal-winter_02.webp" alt="Winter Design 2" />
+              <img src="../images/seasonal/seasonal-winter_03.webp" alt="Winter Design 3" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Spring Section -->
+        <section class="season-section spring">
+          <h2>Spring</h2>
+          <div class="season-content">
+            <div class="season-text">
+              <p>
+                Spring is the season of renewal. We design gardens bursting with color, featuring
+                flowering plants and rejuvenated greenery that herald the arrival of warmer weather.
+              </p>
+            </div>
+            <div class="season-gallery gallery">
+              <img src="../images/seasonal/seasonal-spring_01.webp" alt="Spring Design 1" />
+              <img src="../images/seasonal/seasonal-spring_02.webp" alt="Spring Design 2" />
+              <img src="../images/seasonal/seasonal-spring_03.webp" alt="Spring Design 3" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Button -->
+        <div class="cta">
+          <p>Interested in seasonal design for your property?</p>
+          <a href="../index.html#contact" class="cta-button">Contact Us</a>
+        </div>
       </div>
     </main>
 
@@ -63,5 +179,7 @@
       </div>
       <p>&copy; 2024 Parkway Landscaping. All rights reserved.</p>
     </footer>
+    <script src="../scripts/mobile.js"></script>
+    <script src="../scripts/gallery.js"></script>
   </body>
 </html>

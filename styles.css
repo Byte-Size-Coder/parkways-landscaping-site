@@ -30,8 +30,8 @@ a:hover {
 }
 
 /* ==========================================================================
-       HEADER STYLES
-       ========================================================================== */
+         HEADER STYLES
+     ========================================================================== */
 .header {
   background: #122069;
   color: #fff;
@@ -48,6 +48,7 @@ a:hover {
   justify-content: space-between;
 }
 
+/* Logo */
 .header .logo {
   display: flex;
   align-items: center;
@@ -63,78 +64,16 @@ a:hover {
   margin-right: 10px;
 }
 
-/* Navigation Styles */
-.navbar {
-  position: relative;
-}
-
-.navbar ul.nav-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-.navbar ul.nav-menu li {
-  margin: 0 15px;
-  position: relative;
-}
-
-.navbar ul.nav-menu li a {
-  color: #fff;
-  font-weight: bold;
-}
-
-/* Dropdown Menu */
-.navbar ul.nav-menu li .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%; /* directly below the parent */
-  left: 0;
-  background-color: #122069;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  min-width: 160px;
-  z-index: 1;
-}
-
-.navbar ul.nav-menu li .dropdown-content a {
-  padding: 10px 15px;
-  color: white;
-  display: block;
-}
-
-.navbar ul.nav-menu li .dropdown-content a:hover {
-  background-color: #343d6b;
-}
-
-/* Hover effect for desktop dropdown */
-.navbar ul.nav-menu li:hover .dropdown-content {
-  display: block;
-}
-
-/* Mobile Menu Toggle */
-.mobile-menu-toggle {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  width: 30px;
-  height: 25px;
-  justify-content: space-between;
-}
-
-.mobile-menu-toggle span {
-  display: block;
-  height: 3px;
-  background: #fff;
-  border-radius: 3px;
-}
-
 /* Contact Info */
 .header .contact-info {
   margin-right: 20px;
   font-size: 14px;
   text-align: right;
+}
+
+.header .contact-info div {
+  display: flex;
+  align-items: center;
 }
 
 .header .contact-info a {
@@ -144,10 +83,123 @@ a:hover {
 }
 
 /* ==========================================================================
-       HERO SECTION
+         DESKTOP NAVIGATION STYLES
+     ========================================================================== */
+.desktop-nav {
+  display: block;
+}
+
+.desktop-nav .nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.desktop-nav .nav-menu li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.desktop-nav .nav-menu li a {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Desktop Dropdown */
+.desktop-nav .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #122069;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  min-width: 160px;
+  z-index: 1;
+}
+
+.desktop-nav .dropdown-content a {
+  padding: 10px 15px;
+  color: white;
+  display: block;
+}
+
+.desktop-nav .dropdown-content a:hover {
+  background-color: #343d6b;
+}
+
+.desktop-nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ==========================================================================
+         MOBILE NAVIGATION STYLES
+     ========================================================================== */
+.mobile-nav {
+  display: none; /* hidden on desktop */
+  position: relative;
+  width: 100%;
+}
+
+.mobile-nav .mobile-menu-toggle {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  height: 25px;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.mobile-nav .mobile-menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+/* Mobile nav-menu container */
+.mobile-nav .nav-menu {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none; /* toggled by JS */
+  flex-direction: column;
+  align-items: center;
+  background: #122069;
+  position: absolute;
+  top: 60px; /* adjust based on header height */
+  left: 0;
+  width: 90vw;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.mobile-nav .nav-menu.active {
+  display: flex;
+}
+
+.mobile-nav .nav-menu li {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.mobile-nav .nav-menu li a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+         HERO SECTION
      ========================================================================== */
 .hero {
-  background: url("images/placeholders/garden.jpg") no-repeat center center/cover;
+  background: url("images/banners/garden-banner-01.jpg") no-repeat center center/cover;
   color: #fff;
   text-align: center;
   padding: 100px 0;
@@ -180,7 +232,7 @@ a:hover {
 }
 
 /* ==========================================================================
-       CALL-TO-ACTION BUTTON
+         CALL-TO-ACTION BUTTON
      ========================================================================== */
 .cta-button {
   display: inline-block;
@@ -197,7 +249,7 @@ a:hover {
 }
 
 /* ==========================================================================
-       SERVICES SECTION
+         SERVICES SECTION
      ========================================================================== */
 .services {
   padding: 50px 0;
@@ -220,8 +272,14 @@ a:hover {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .service-cards {
+    flex-direction: column;
+  }
+}
+
 /* ==========================================================================
-       PORTFOLIO SECTION
+         PORTFOLIO SECTION
      ========================================================================== */
 .portfolio {
   padding: 50px 0;
@@ -242,7 +300,6 @@ a:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Gallery Images */
 @media (max-width: 768px) {
   .gallery img {
     max-width: 45%;
@@ -256,7 +313,7 @@ a:hover {
 }
 
 /* ==========================================================================
-       TESTIMONIALS SECTION
+         TESTIMONIALS SECTION
      ========================================================================== */
 .testimonials {
   padding: 50px 0;
@@ -285,31 +342,8 @@ a:hover {
   font-weight: bold;
 }
 
-/* Additional Testimonials Page Grid (if needed) */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.testimonial-card {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-style: italic;
-}
-
-.testimonial-card span {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #122069;
-}
-
 /* ==========================================================================
-       CONTACT SECTION
+         CONTACT SECTION
      ========================================================================== */
 .contact {
   padding: 50px 0;
@@ -347,7 +381,7 @@ a:hover {
 }
 
 /* ==========================================================================
-       FOOTER STYLES
+         FOOTER STYLES
      ========================================================================== */
 .footer {
   background: #122069;
@@ -381,36 +415,106 @@ a:hover {
 }
 
 /* ==========================================================================
-       BASIC PAGE LAYOUT
+         NAVIGATION TOGGLE BETWEEN DESKTOP & MOBILE
      ========================================================================== */
-.page {
-  padding: 50px 0;
-  text-align: center;
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
+
+  .header .logo {
+    display: none;
+  }
 }
 
-.page h1 {
-  font-size: 36px;
-  color: #122069;
-  margin-bottom: 20px;
+/* Carousel Section with Fade Transition and Fixed Height */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+  min-height: 500px; /* Adjust this value based on your image height */
 }
 
-.page p {
-  font-size: 18px;
-  color: #333;
-  line-height: 1.6;
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Each item is layered on top of each other */
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel img {
+  width: 50%;
+  display: block;
+  border-radius: 5px;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(18, 32, 105, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
 }
 
 /* ==========================================================================
-       SERVICES PAGE STYLES
-     ========================================================================== */
+   SERVICE PAGES STYLES
+   ========================================================================== */
 
 /* Service Hero Section */
 .service-hero {
-  position: relative;
+  /* You can override the background image per page if needed */
+
   color: #fff;
   text-align: center;
   padding: 100px 0;
-  background: url("images/placeholders/garden.jpg") no-repeat center center/cover;
+  position: relative;
+}
+
+#design-banner {
+  background: url("./images/banners/design-banner.jpg") no-repeat center center/cover;
+}
+
+#hardscape-banner {
+  background: url("./images/banners/hardscape-banner.jpg") no-repeat center center/cover;
+  height: 200px;
+}
+
+#maitenance-banner {
+  background: url("./images/banners/maitenance-banner.jpg") no-repeat center center/cover;
 }
 
 .service-hero::before {
@@ -427,169 +531,340 @@ a:hover {
 .service-hero .container {
   position: relative;
   z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.service-hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.service-hero p {
+  font-size: 20px;
+  margin: 0 auto;
+  max-width: 600px;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Service Details Section */
 .service-details {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-  color: #333;
+  padding: 60px 0;
   text-align: center;
+  background: #f9f9f9;
+}
+
+.service-details .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .service-details h2 {
+  font-size: 36px;
   margin-bottom: 20px;
-}
-
-.service-details p {
-  max-width: 800px;
-  margin: 0 auto 20px;
-  text-align: center;
-}
-
-.service-details ul {
-  list-style-type: none;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  padding-left: 20px;
+  color: #122069;
+  font-family: "Playfair Display", serif;
 }
 
 .service-details h3 {
+  font-size: 28px;
   margin-top: 40px;
   margin-bottom: 20px;
-  text-align: center;
+  color: #122069;
+  font-family: "Playfair Display", serif;
 }
 
-/* Call-to-Action Section (for service pages) */
-.cta {
+.service-details p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* List Styling */
+.service-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 20px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.service-details ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.service-details ul li::before {
+  content: "\2022"; /* bullet */
+  position: absolute;
+  left: 0;
+  color: #122069;
+}
+
+/* Gallery Styling */
+.service-details .gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.service-details .gallery img {
+  width: calc(33.33% - 10px);
+  border-radius: 5px;
+}
+
+/* Call-to-Action Section */
+.service-details .cta {
   text-align: center;
   margin-top: 40px;
 }
 
-/* ==========================================================================
-       MOBILE & RESPONSIVE STYLES
-     ========================================================================== */
+.service-details .cta p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Responsive adjustments for service pages */
 @media (max-width: 768px) {
-  /* Adjust header layout */
-  .header .container {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  /* Hide contact info on small screens */
-  .header .contact-info {
-    display: none;
-  }
-  /* Hide the logo on mobile */
-  .header .logo {
-    display: none;
-  }
-
-  /* Center the hamburger menu in the navbar */
-  .navbar {
-    position: relative;
-    text-align: center;
-    width: 100%;
-  }
-
-  .mobile-menu-toggle {
-    display: flex;
-    margin: 0 auto;
-  }
-
-  /* Full-width mobile navigation menu */
-  .navbar ul.nav-menu {
-    position: absolute;
-    top: 60px; /* adjust based on header height */
-    left: 0;
-    width: 100%;
-    background: #122069;
-    flex-direction: column;
-    align-items: center;
-    display: none; /* hidden by default */
-    padding: 10px 0;
-    box-sizing: border-box;
-  }
-
-  .navbar ul.nav-menu.active {
-    display: flex;
-  }
-
-  .navbar ul.nav-menu li {
-    width: 100%;
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  .navbar ul.nav-menu li a {
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    box-sizing: border-box;
-  }
-
-  /* Nested Dropdown for "Services" */
-  .dropdown-content {
-    position: static; /* so it flows with the document */
-    width: 100%;
-    display: none;
-    background: #122069;
-    box-sizing: border-box;
-  }
-
-  /* When toggled, show the nested dropdown items */
-  .dropdown-content.active {
-    display: block;
-  }
-
-  /* Optionally indent nested links */
-  .dropdown-content a {
-    padding-left: 20px;
-    text-align: left;
-  }
-
-  /* Add an arrow indicator to the "Services" link */
-  .dropdown .dropbtn::after {
-    font-size: 0.8em;
-  }
-
-  /* Adjust hero section font sizes */
-  .hero {
-    padding: 80px 0;
-  }
-
-  .hero h2 {
-    font-size: 28px;
-  }
-
-  .hero p {
+  .service-details ul li {
     font-size: 16px;
   }
 
-  .service-cards {
-    flex-direction: column;
+  .service-hero h1 {
+    font-size: 32px;
   }
 
-  .contact {
-    width: 80%;
-    margin: 0 auto;
+  .service-hero p {
+    font-size: 18px;
   }
 
-  .image-logo {
-    width: 50px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    width: 95%;
+  .service-details h2 {
+    font-size: 28px;
   }
 
-  .hero h2 {
+  .service-details h3 {
     font-size: 24px;
   }
 
-  .hero p {
-    font-size: 14px;
+  .service-details p {
+    font-size: 16px;
+  }
+
+  .service-details .gallery img {
+    width: calc(50% - 10px);
+  }
+}
+
+/* Lightbox Overlay */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  cursor: zoom-out;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   TESTIMONIALS PAGE STYLES
+   ========================================================================== */
+.page {
+  padding: 60px 0;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.page h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #122069;
+  font-family: "Playfair Display", serif;
+}
+
+.page p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Testimonials Grid Layout */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Testimonial Card Styles */
+.testimonial-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+
+.testimonial-card span {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  color: #122069;
+  font-family: "Playfair Display", serif;
+}
+
+/* ==========================================================================
+   SEASONAL DESIGN PAGE STYLES
+   ========================================================================== */
+
+/* Cost Section */
+.cost-section {
+  padding: 40px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.cost-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #122069;
+  font-family: "Playfair Display", serif;
+}
+
+.cost-section p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+/* Season Sections */
+.season-section {
+  padding: 60px 0;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.season-section:last-of-type {
+  border-bottom: none;
+}
+
+.season-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #122069;
+  font-family: "Playfair Display", serif;
+}
+
+.season-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.season-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  text-align: left;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+.season-gallery {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.season-gallery img {
+  width: calc(33.33% - 10px);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.season-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* CTA Button for Seasonal Design */
+.cta {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cta .cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #bfd96c;
+  color: #122069;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta .cta-button:hover {
+  background: #122069;
+  color: #bfd96c;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .season-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .season-text {
+    text-align: center;
+  }
+
+  .season-gallery img {
+    width: calc(50% - 10px);
   }
 }

@@ -17,37 +17,64 @@
   <body>
     <header class="header">
       <div class="container">
+        <!-- Logo -->
         <div class="logo">
           <a href="../index.html">
-            <img src="../images/logo.png" alt="Parkway Landscaping Logo" class="image-logo" />
+            <img src="../images/logo.png" alt="Logo" class="image-logo" />
           </a>
         </div>
-        <nav class="navbar">
-          <ul>
+
+        <!-- Desktop Navigation -->
+        <nav class="navbar desktop-nav">
+          <ul class="nav-menu">
             <li><a href="../about/index.html">About Us</a></li>
             <li class="dropdown">
-              <a class="dropbtn">Services &#9662;</a>
+              <a class="dropbtn" href="#">Services &#9662;</a>
               <div class="dropdown-content">
-                <a href="garden-design.html">Garden Design</a>
-                <a href="hardscaping.html">Hardscaping</a>
-                <a href="maitenance.html">Maintenance</a>
+                <a href="../services/garden-design.html">Garden Design</a>
+                <a href="../services/hardscaping.html">Hardscaping</a>
+                <a href="../services/maitenance.html">Maintenance</a>
               </div>
             </li>
             <li><a href="../seasonal/index.html">Seasonal Design</a></li>
             <li><a href="../testimonials/index.html">Testimonials</a></li>
           </ul>
         </nav>
+
+        <!-- Mobile Navigation -->
+        <nav class="navbar mobile-nav">
+          <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/index.html">About Us</a></li>
+            <!-- Flattened Services Links -->
+            <li><a href="../services/garden-design.html">Garden Design</a></li>
+            <li><a href="../services/hardscaping.html">Hardscaping</a></li>
+            <li><a href="../seasonal/index.html">Seasonal Design</a></li>
+            <li><a href="../testimonials/index.html">Testimonials</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact Info -->
         <div class="contact-info">
-          <p>Call us: <a href="tel:+123456789">+1 (234) 567-890</a></p>
-          <p>Email: <a href="mailto:info@parkwaylandscaping.com">info@parkwaylandscaping.com</a></p>
+          <div>
+            <span><img src="../images/phone-call.png" width="25px" style="color: white" /></span>
+            <a href="tel:+123456789">+1 (234) 567-890</a>
+          </div>
+          <div>
+            <span><img src="../images/email.png" width="25px" /></span>
+            <a href="mailto:info@parkwaylandscaping.com">info@parkwaylandscaping.com</a>
+          </div>
         </div>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section
-      class="service-hero"
-    >
+    <section class="service-hero" id="maitenance-banner">
       <div class="container">
         <h1>Maintenance</h1>
         <p>Keeping your landscape pristine all year round</p>
@@ -74,9 +101,11 @@
 
         <h3>Maintenance Gallery</h3>
         <div class="gallery">
-          <img src="../images/placeholders/maintenance-1.jpg" alt="Maintenance project 1" />
-          <img src="../images/placeholders/maintenance-2.jpg" alt="Maintenance project 2" />
-          <img src="../images/placeholders/maintenance-3.jpg" alt="Maintenance project 3" />
+          <img src="../images/maitenance/maitenance-work_01.jpg" alt="Maintenance project 1" />
+          <div>
+            <img src="../images/maitenance/maitenance-work_02.jpg" alt="Maintenance project 2" />
+            <img src="../images/maitenance/maitenance-work_03.jpg" alt="Maintenance project 3" />
+          </div>
         </div>
 
         <div class="cta">
@@ -107,5 +136,7 @@
       </div>
       <p>&copy; 2024 Parkway Landscaping. All rights reserved.</p>
     </footer>
+    <script src="../scripts/mobile.js"></script>
+    <script src="../scripts/gallery.js"></script>
   </body>
 </html>
