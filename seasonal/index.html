@@ -153,11 +153,26 @@
           </div>
         </section>
 
-        <!-- Contact Button -->
-        <div class="cta">
-          <p>Interested in seasonal design for your property?</p>
-          <a href="../index.html#contact" class="cta-button">Contact Us</a>
-        </div>
+        <section id="contact" class="contact">
+          <div class="container">
+            <h2>Contact Us</h2>
+            <p>Interested in season design for your property? Reach out to us today!</p>
+            <form id="contact-form" action="#" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" />
+              <input type="text" name="phone" placeholder="Your Phone Number" />
+              <input
+                class="subject-input"
+                type="text"
+                name="subject"
+                value="Subject - Seasonal Design"
+                readonly
+              />
+              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+              <button type="submit" class="cta-button">Send Message</button>
+            </form>
+          </div>
+        </section>
       </div>
     </main>
 
@@ -181,5 +196,6 @@
     </footer>
     <script src="../scripts/mobile.js"></script>
     <script src="../scripts/gallery.js"></script>
+    <script src="../scripts/email.js"></script>
   </body>
 </html>

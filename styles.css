@@ -357,7 +357,7 @@ a:hover {
 
 .contact form input,
 .contact form textarea {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
@@ -867,4 +867,16 @@ a:hover {
   .season-gallery img {
     width: calc(50% - 10px);
   }
+}
+
+.subject-input {
+  border: 0px !important;
+}
+
+.subject-input :hover {
+  border: 0px !important;
+}
+
+.subject-input :focus {
+  border: 0px !important;
 }

@@ -108,10 +108,26 @@
           </div>
         </div>
 
-        <div class="cta">
-          <p>Keep your property looking its best.</p>
-          <a href="../contact/index.html" class="cta-button">Schedule a Service</a>
-        </div>
+        <section id="contact" class="contact">
+          <div class="container">
+            <h2>Schedule a Service</h2>
+            <p>Keep your property looking its best.</p>
+            <form id="contact-form" action="#" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" />
+              <input type="text" name="phone" placeholder="Your Phone Number" />
+              <input
+                class="subject-input"
+                type="text"
+                name="subject"
+                value="Subject - Maintenance"
+                readonly
+              />
+              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+              <button type="submit" class="cta-button">Send Message</button>
+            </form>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -138,5 +154,6 @@
     </footer>
     <script src="../scripts/mobile.js"></script>
     <script src="../scripts/gallery.js"></script>
+    <script src="../scripts/email.js"></script>
   </body>
 </html>

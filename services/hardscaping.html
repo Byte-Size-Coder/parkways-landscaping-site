@@ -108,10 +108,26 @@
           <img src="../images/hardscape/hardscape_05.jpg" alt="Hardscaping project 5" />
         </div>
 
-        <div class="cta">
-          <p>Interested in a custom hardscape solution?</p>
-          <a href="../contact/index.html" class="cta-button">Get a Free Estimate</a>
-        </div>
+        <section id="contact" class="contact">
+          <div class="container">
+            <h2>Inquire With Us</h2>
+            <p>Interested in a custom hardscape solution? Reach out to us today!</p>
+            <form id="contact-form" action="#" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" />
+              <input type="text" name="phone" placeholder="Your Phone Number" />
+              <input
+                class="subject-input"
+                type="text"
+                name="subject"
+                value="Subject - Hardscape"
+                readonly
+              />
+              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+              <button type="submit" class="cta-button">Send Message</button>
+            </form>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -138,5 +154,6 @@
     </footer>
     <script src="../scripts/mobile.js"></script>
     <script src="../scripts/gallery.js"></script>
+    <script src="../scripts/email.js"></script>
   </body>
 </html>

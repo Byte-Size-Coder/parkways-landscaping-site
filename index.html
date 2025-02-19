@@ -164,9 +164,17 @@
       <div class="container">
         <h2>Contact Us</h2>
         <p>Have a question or ready to start your landscaping project? Reach out to us today!</p>
-        <form action="#" method="POST">
+        <form id="contact-form" action="#" method="POST">
           <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="email" name="email" placeholder="Your Email" />
+          <input type="text" name="phone" placeholder="Your Phone Number" />
+          <input
+            class="subject-input"
+            type="text"
+            name="subject"
+            value="Subject - General Inquiry"
+            readonly
+          />
           <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
           <button type="submit" class="cta-button">Send Message</button>
         </form>
@@ -196,5 +204,6 @@
     </footer>
     <script src="./scripts/mobile.js"></script>
     <script src="./scripts/carousel.js"></script>
+    <script src="./scripts/email.js"></script>
   </body>
 </html>
