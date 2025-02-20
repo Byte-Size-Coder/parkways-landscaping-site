@@ -1,0 +1,39 @@
+/* Testimonials Grid Layout */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Testimonial Card Styles */
+  .testimonial-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .testimonial-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .testimonial-card span {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #122069;
+    font-family: "Playfair Display", serif;
+  }

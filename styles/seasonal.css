@@ -1,0 +1,93 @@
+/* Cost Section */
+.cost-section {
+    padding: 40px 0;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .cost-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #122069;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .cost-section p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Season Sections */
+  .season-section {
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .season-section:last-of-type {
+    border-bottom: none;
+  }
+  
+  .season-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #122069;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .season-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .season-text {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+    text-align: left;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    color: #333;
+  }
+  
+  .season-gallery {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .season-gallery img {
+    width: calc(33.33% - 10px);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .season-gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Responsive Adjustments */
+@media (max-width: 768px) {
+    .season-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .season-text {
+      text-align: center;
+    }
+  
+    .season-gallery img {
+      width: calc(50% - 10px);
+    }
+  }

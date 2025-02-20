@@ -1,0 +1,170 @@
+
+/* Service Hero Section */
+.service-hero {
+    /* You can override the background image per page if needed */
+  
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+  }
+  
+  #design-banner {
+    background: url("../images/banners/design-banner.jpg") no-repeat center center/cover;
+  }
+  
+  #hardscape-banner {
+    background: url("../images/banners/hardscape-banner.jpg") no-repeat center center/cover;
+    height: 200px;
+  }
+  
+  #maitenance-banner {
+    background: url("../images/banners/maitenance-banner.jpg") no-repeat center center/cover;
+  }
+  
+  .service-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  .service-hero .container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .service-hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .service-hero p {
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* Service Details Section */
+  .service-details {
+    padding: 60px 0;
+    text-align: center;
+    background: #f9f9f9;
+  }
+  
+  .service-details .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .service-details h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #122069;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .service-details h3 {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #122069;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .service-details p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* List Styling */
+  .service-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 20px auto;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .service-details ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .service-details ul li::before {
+    content: "\2022"; /* bullet */
+    position: absolute;
+    left: 0;
+    color: #122069;
+  }
+  
+  /* Gallery Styling */
+  .service-details .gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .service-details .gallery img {
+    width: calc(33.33% - 10px);
+    border-radius: 5px;
+  }
+  
+  /* Call-to-Action Section */
+  .service-details .cta {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .service-details .cta p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* Responsive adjustments for service pages */
+  @media (max-width: 768px) {
+    .service-details ul li {
+      font-size: 16px;
+    }
+  
+    .service-hero h1 {
+      font-size: 32px;
+    }
+  
+    .service-hero p {
+      font-size: 18px;
+    }
+  
+    .service-details h2 {
+      font-size: 28px;
+    }
+  
+    .service-details h3 {
+      font-size: 24px;
+    }
+  
+    .service-details p {
+      font-size: 16px;
+    }
+  
+    .service-details .gallery img {
+      width: calc(50% - 10px);
+    }
+  }
