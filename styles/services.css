@@ -12,6 +12,11 @@
   background: url("../images/banners/design-banner.webp") no-repeat center center/cover;
 }
 
+#softscape-banner {
+  background: url("../images/banners/softscape-banner.webp") no-repeat center center/cover;
+  height: 200px;
+}
+
 #hardscape-banner {
   background: url("../images/banners/hardscape-banner.webp") no-repeat center center/cover;
   height: 200px;
@@ -102,13 +107,6 @@
   position: relative;
   padding-left: 20px;
   font-family: "Roboto", sans-serif;
-}
-
-.service-details ul li::before {
-  content: "\2022"; /* bullet */
-  position: absolute;
-  left: 0;
-  color: #122069;
 }
 
 /* Gallery Styling */

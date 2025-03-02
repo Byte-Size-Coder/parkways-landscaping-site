@@ -4,37 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Testimonials</title>
+    <link rel="icon" type="image/x-icon" href="../images/Leaf Branding.png" />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="../styles/testimonials.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeYKx12OpyDyURN0APb4mPKCemXSEVcKg&libraries=places"></script>
+    <style>
+      /* Basic styling for the reviews container */
+      #reviews {
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        
+      }
+      .review {
+        width: 500px;
+        border-bottom: 1px solid #ccc;
+        padding: 20px;
+        background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .review:last-child {
+        border-bottom: none;
+      }
+      .review .author {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .review .rating {
+        font-weight: bold;
+        color: #122069;
+      }
+    </style>
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <!-- Logo -->
         <div class="logo">
           <a href="../index.html">
-            <img src="../images/logo.png" alt="Logo" class="image-logo" />
+            <img src="../images/Branding_w_navy.png" alt="Logo" class="image-logo" />
           </a>
         </div>
 
-        <!-- Desktop Navigation -->
         <nav class="navbar desktop-nav">
-          <ul class="nav-menu">
+          <ul class="nav-menu" style="gap: 24px">
             <li><a href="../about/index.html">About Us</a></li>
             <li class="dropdown">
               <a class="dropbtn" href="#">Services &#9662;</a>
               <div class="dropdown-content">
-                <a href="../services/garden-design.html">Garden Design</a>
-                <a href="../services/hardscaping.html">Hardscaping</a>
+                <a href="../services/design.html">Design</a>
+                <a href="../services/softscape.html">Softscape</a>
+                <a href="../services/hardscape.html">Hardscape</a>
                 <a href="../services/maitenance.html">Maintenance</a>
+                <a href="../services/seasonal.html">Seasonal Design</a>
               </div>
             </li>
-            <li><a href="../seasonal/index.html">Seasonal Design</a></li>
+            <li><a href="../partners/index.html">Partners</a></li>
             <li><a href="../testimonials/index.html">Testimonials</a></li>
           </ul>
         </nav>
 
-        <!-- Mobile Navigation -->
         <nav class="navbar mobile-nav">
           <div class="mobile-menu-toggle">
             <span></span>
@@ -42,96 +74,99 @@
             <span></span>
           </div>
           <ul class="nav-menu">
-            <li><a href="../index.html">Home</a></li>
             <li><a href="../about/index.html">About Us</a></li>
-            <!-- Flattened Services Links -->
-            <li><a href="../services/garden-design.html">Garden Design</a></li>
-            <li><a href="../services/hardscaping.html">Hardscaping</a></li>
+            <li><a href="../services/design.html">Design</a></li>
+            <li><a href="../services/softscape.html">Softscape</a></li>
+            <li><a href="../services/hardscape.html">Hardscape</a></li>
             <li><a href="../services/maitenance.html">Maintenance</a></li>
-            <li><a href="../seasonal/index.html">Seasonal Design</a></li>
+            <li><a href="../services/seasonal.html">Seasonal Design</a></li>
+            <li><a href="../partners/index.html">Partners</a></li>
+            <li><a href="../testimonials/index.html">Testimonials</a></li>
           </ul>
         </nav>
-
-        <!-- Contact Info -->
         <div class="contact-info">
           <div>
-            <span><img src="../images/phone-call.png" width="25px" style="color: white" /></span>
-            <a href="tel:+123456789">+1 (234) 567-890</a>
-          </div>
-          <div>
-            <span><img src="../images/email.png" width="25px" /></span>
-            <a href="mailto:info@parkwaylandscaping.com">info@parkwaylandscaping.com</a>
+            <span><img src="../images/phone-call.png" width="25px" /></span>
+            <a href="tel:+12266675901">(226) 667-5901</a>
           </div>
         </div>
       </div>
     </header>
+
     <section class="page">
       <div class="container">
         <h1>What Our Clients Say</h1>
-        <p>Our clients love the work we do. Here's what they have to say:</p>
-
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <p>"Parkway Landscaping transformed our yard into a paradise. Highly recommended!"</p>
-            <span>- Jane D.</span>
-          </div>
-          <div class="testimonial-card">
-            <p>"Professional, reliable, and talented. Couldn’t be happier with the results."</p>
-            <span>- Mark S.</span>
-          </div>
-          <div class="testimonial-card">
-            <p>"Amazing attention to detail. They truly brought my vision to life."</p>
-            <span>- Emily R.</span>
-          </div>
-          <div class="testimonial-card">
-            <p>
-              "Their seasonal designs are breathtaking. I love how my garden changes through the
-              year!"
-            </p>
-            <span>- Sarah K.</span>
-          </div>
+        <p>Our clients love the work we do. Here's what they have to say from google reviews</p>
+          <a class="cta-button" href="https://search.google.com/local/writereview?placeid=ChIJrXtJi1T7LogRU6dTzlILMaM" target="_blank" class="review-button">
+            Leave a Review
+          </a>
+        <div id="reviews">Loading reviews...</div>
         </div>
+  
       </div>
     </section>
 
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>Want to leave us a review?</h2>
-        <p>Let us know today how we did!</p>
-        <form id="contact-form" action="#" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" />
-          <input type="text" name="phone" placeholder="Your Phone Number" />
-          <input
-            class="subject-input"
-            type="text"
-            name="subject"
-            value="Subject - Testimonial"
-            readonly
-          />
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit" class="cta-button">Send Message</button>
-        </form>
-      </div>
-    </section>
-
+ 
     <footer class="footer">
       <div class="container">
         <div class="info">
-          <p>Parkway Landscaping</p>
-          <p>123 Green Lane, Suite 100</p>
-          <p>City, State, 12345</p>
-          <p>Call us: <a href="tel:+123456789">+1 (234) 567-890</a></p>
-          <p>Email: <a href="mailto:info@parkwaylandscaping.com">info@parkwaylandscaping.com</a></p>
+          <p>Parkway Gardens Landscaping</p>
+          <p>1473 Gainsborough Rd</p>
+          <p>London, Ontario, N6H 5L2</p>
         </div>
+        <div>
+          <!-- New Land Acknowledgement link -->
+          <div style="margin: 24px 0">
+            <a href="#" class="cta-button" id="landAckLink">Land Acknowledgement</a>
+          </div>
+          <p>&copy; 2025 Parkway Landscaping. All rights reserved.</p>
+        </div>
+
         <div class="hours">
           <h3>Operating Hours</h3>
-          <p>Mon-Fri: 8:00 AM - 6:00 PM</p>
-          <p>Sat: 9:00 AM - 3:00 PM</p>
-          <p>Sun: Closed</p>
+          <p>Mon-Fri: 9:00 AM - 5:00 PM</p>
+          <p>Sat-Sun: Closed</p>
         </div>
       </div>
-      <p>&copy; 2024 Parkway Landscaping. All rights reserved.</p>
+      <!-- Modal Overlay for Land Acknowledgement -->
+      <div id="landAckModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Land Acknowledgement</h2>
+          <p>
+            We acknowledge that we are located on the traditional lands of the Anishinaabek,
+            Haudenosaunee, Lūnaapéewak and Attawandaron.
+          </p>
+          <p>
+            We acknowledge all the treaties that are specific to this area: the Two Row Wampum Belt
+            Treaty of the Haudenosaunee Confederacy/Silver Covenant Chain; the Beaver Hunting
+            Grounds of the Haudenosaunee NANFAN Treaty of 1701; the McKee Treaty of 1790, the London
+            Township Treaty of 1796, the Huron Tract Treaty of 1827, with the Anishinaabeg, and the
+            Dish with One Spoon Covenant Wampum of the Anishnaabek and Haudenosaunee.
+          </p>
+          <p>
+            This land continues to be home to diverse Indigenous people (First Nations, Métis and
+            Inuit) whom we recognize as contemporary stewards of the land and vital contributors to
+            society. We hold all that is in the natural world in our highest esteem and give honour
+            to the wonderment of all things within Creation. We bring our minds together as one to
+            share good words, thoughts, feelings and sincerely send them out to each other and to
+            all parts of creation. We are grateful for the natural gifts in our world, and we
+            encourage everyone to be faithful to the natural laws of Creation.
+          </p>
+          <p>
+            The three Indigenous Nations that are neighbours to London are the Chippewas of the
+            Thames First Nation; Oneida Nation of the Thames; and the Munsee-Delaware Nation who all
+            continue to live as sovereign Nations with individual and unique languages, cultures and
+            customs.
+          </p>
+          <p>
+            This Land Acknowledgement is a first step towards reconciliation. Awareness means
+            nothing without action. It is important that everyone takes the necessary steps towards
+            decolonizing practices. We encourage everyone to be informed about the traditional
+            lands, Treaties, history, and cultures of the Indigenous people local to their region.
+          </p>
+        </div>
+      </div>
     </footer>
     <script>
       // Toggle mobile nav on hamburger click
@@ -144,5 +179,58 @@
         });
       });
     </script>
+   <script>
+    function initializeReviews() {
+      // Create a dummy div as the PlacesService container (not visible on the page)
+      const serviceDiv = document.createElement('div');
+      const service = new google.maps.places.PlacesService(serviceDiv);
+  
+      // Replace with your business's Place ID
+      const request = {
+        placeId: 'ChIJrXtJi1T7LogRU6dTzlILMaM',
+        fields: ['reviews']  // Request only the reviews field
+      };
+  
+      service.getDetails(request, function(place, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+          const reviewsContainer = document.getElementById('reviews');
+          reviewsContainer.innerHTML = ''; // Clear the loading text
+  
+          if (place.reviews && place.reviews.length) {
+            // Filter reviews for a rating of 4 or higher
+            let filteredReviews = place.reviews.filter(review => review.rating >= 4);
+            
+            // Sort the filtered reviews by time in descending order (latest first)
+            filteredReviews.sort((a, b) => b.time - a.time);
+            
+            // Limit to 5 reviews
+            let limitedReviews = filteredReviews.slice(0, 5);
+  
+            limitedReviews.forEach(review => {
+              const reviewDiv = document.createElement('div');
+              reviewDiv.classList.add('review');
+  
+              // Build the review content
+              reviewDiv.innerHTML = `
+                <p class="author">${review.author_name}</p>
+                <p class="rating">Rating: ${review.rating} / 5</p>
+                <p>${review.text}</p>
+              `;
+  
+              reviewsContainer.appendChild(reviewDiv);
+            });
+          } else {
+            reviewsContainer.innerHTML = '<p>No reviews available.</p>';
+          }
+        } else {
+          console.error('Error fetching details:', status);
+          document.getElementById('reviews').innerHTML = '<p>Unable to load reviews at this time.</p>';
+        }
+      });
+    }
+  
+    // Initialize reviews once the window has loaded
+    window.onload = initializeReviews;
+  </script>
   </body>
 </html>

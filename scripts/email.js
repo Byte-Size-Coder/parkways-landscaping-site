@@ -14,22 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const subject = formData.get("subject");
     const message = formData.get("message");
 
-    if (!userEmail && !userPhone) {
-      alert("Please fill out one of email or phone number");
-      return;
-    }
-
     const formattedSubject = subject.split("-")[1].trim();
 
-  //   emailjs.send("service_y3iu9je", "template_bwk9can", {
-  //     name: userName,
-  //     email: userEmail,
-  //     phone: userPhone,
-  //     subject: formattedSubject,
-  //     message: message,
-  // });
+    emailjs.send("service_y3iu9je", "template_bwk9can", {
+      name: userName,
+      email: userEmail,
+      phone: userPhone,
+      subject: formattedSubject,
+      message: message,
+    });
 
-  form.reset()
+    form.reset();
 
     alert("Your message was succefully sent!");
     // You can now use these values however you need,

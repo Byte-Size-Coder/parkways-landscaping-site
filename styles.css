@@ -20,13 +20,20 @@ h3 {
   font-family: "Playfair Display", serif;
 }
 
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #122069;
+  font-family: "Playfair Display", serif;
+}
+
 a {
   text-decoration: none;
-  color: #122069;
+  color: black;
 }
 
 a:hover {
-  color: #bfd96c;
+  color: #122069;
 }
 
 /* ==========================================================================
@@ -52,23 +59,10 @@ a:hover {
 .header .logo {
   display: flex;
   align-items: center;
-  margin-left: 20px;
 }
 
 .header .logo img {
-  background-color: white;
-  border-radius: 50%;
-  padding: 0.75rem;
-  max-height: 200px;
-  max-width: 200px;
-  margin-right: 10px;
-}
-
-/* Contact Info */
-.header .contact-info {
-  margin-right: 20px;
-  font-size: 14px;
-  text-align: right;
+  max-width: 225px;
 }
 
 .header .contact-info div {
@@ -79,7 +73,7 @@ a:hover {
 .header .contact-info a {
   color: #fff;
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 /* ==========================================================================
@@ -139,7 +133,6 @@ a:hover {
 .mobile-nav {
   display: none; /* hidden on desktop */
   position: relative;
-  width: 100%;
 }
 
 .mobile-nav .mobile-menu-toggle {
@@ -199,11 +192,14 @@ a:hover {
          HERO SECTION
      ========================================================================== */
 .hero {
-  background: url("images/banners/garden-banner-01.webp") no-repeat center center/cover;
   color: #fff;
   text-align: center;
-  padding: 100px 0;
+  padding: 125px 0;
   position: relative;
+}
+
+#hero-home {
+  background: url("images/banners/garden-banner-01.webp") no-repeat center center/cover;
 }
 
 .hero::before {
@@ -222,13 +218,13 @@ a:hover {
   z-index: 2;
 }
 
-.hero h2 {
+.hero h1 {
   font-size: 36px;
+  color: white;
 }
 
 .hero p {
   font-size: 18px;
-  margin: 20px 0;
 }
 
 /* ==========================================================================
@@ -261,6 +257,8 @@ a:hover {
   display: flex;
   gap: 20px;
   justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .service-cards .card {
@@ -270,6 +268,12 @@ a:hover {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.card h3 {
+  color: #122069;
 }
 
 @media (max-width: 768px) {
@@ -468,7 +472,6 @@ a:hover {
 
 .page p {
   font-size: 18px;
-  margin-bottom: 40px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -482,4 +485,87 @@ a:hover {
 
 .subject-input :focus {
   border: 0px !important;
+}
+
+.values {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.value-item {
+  display: flex;
+  max-width: 300px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Modal overlay */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000; /* Ensure it appears on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scrolling if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #fefefe;
+
+  margin: 15% auto; /* 15% from the top, centered horizontally */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.modal-content p {
+  text-align: start;
+  color: black;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.partner-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.partner-cards .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  min-width: 500px;
+  max-width: 300px;
 }
