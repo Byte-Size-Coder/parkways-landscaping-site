@@ -22,8 +22,8 @@
   height: 200px;
 }
 
-#maitenance-banner {
-  background: url("../images/banners/maitenance-banner.webp") no-repeat center center/cover;
+#maintenance-banner {
+  background: url("../images/banners/maintenance-banner.webp") no-repeat center center/cover;
 }
 
 .service-hero::before {
